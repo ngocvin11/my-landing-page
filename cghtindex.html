@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prime - Dịch vụ chăm sóc nội thất xa hoa: giặt sofa, thảm, rèm, giày cao cấp, dọn dẹp nhà. Giảm 30% hôm nay! Đặt lịch ngay!">
+    <meta name="keywords" content="giặt sofa cao cấp, giặt thảm xa hoa, giặt rèm sang trọng, giặt giày luxury, dọn dẹp nhà, chăm sóc nội thất">
+    <meta property="og:title" content="Prime - Chăm Sóc Nội Thất Xa Hoa Giảm 30%">
+    <meta property="og:description" content="Dịch vụ giặt sofa, thảm, rèm, giày, dọn dẹp nhà cao cấp với công nghệ độc quyền. Đặt lịch ngay để nhận ưu đãi 30%!">
+    <meta property="og:image" content="https://via.placeholder.com/1200x628?text=Prime+Noi+That+Xa+Hoa">
+    <meta property="og:url" content="https://primecare.com">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32?text=P">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Open+Sans:wght@300;400&display=swap" as="style">
+    <link rel="preload" href="https://via.placeholder.com/1920x1080?text=Hero+Background" as="image">
+    <title>Prime - Chăm Sóc Nội Thất Xa Hoa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Open Sans',sans-serif;background:#f8f2eb;color:#1a1a1a;line-height:1.6;overflow-x:hidden;transition:background .5s ease}
+        body.dark{background:#1a1a1a;color:#e0e0e0}
+        .container{max-width:800px;margin:0 auto;padding:20px}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        @keyframes slideIn{from{transform:translateY(50%);opacity:0}to{transform:translateY(0);opacity:1)}}
+        @keyframes glow{0%,100%{box-shadow:0 0 8px rgba(212,175,55,.4)}50%{box-shadow:0 0 15px rgba(212,175,55,.7)}}
+        @keyframes sparkle{0%,100%{opacity:0}50%{opacity:.8}}
+        @keyframes ripple{to{transform:scale(4);opacity:0}}
+        @keyframes tick{0%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.8}100%{transform:scale(1);opacity:1}}
+        @keyframes flip{0%{transform:rotateX(0)}50%{transform:rotateX(180deg)}100%{transform:rotateX(360deg)}}
+        .fade-in{opacity:0;animation:fadeIn .8s ease forwards}
+        .pulse{animation:pulse 1.8s infinite}
+        .float{animation:float 3.5s infinite}
+        .slide-in{animation:slideIn .7s ease forwards}
+        .glow{animation:glow 2s infinite}
+        .sparkle::after{content:'✨';position:absolute;font-size:18px;opacity:0;animation:sparkle 1s infinite}
+        .tick{animation:tick .3s ease}
+        .flip{animation:flip .4s ease}
+        .nav{position:sticky;top:0;background:#1a1a1a;color:#fff;padding:12px 0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+        .nav ul{display:flex;justify-content:center;list-style:none}
+        .nav a{color:#fff;text-decoration:none;padding:8px 18px;font-family:'EB Garamond',serif;font-size:15px;transition:all .3s ease}
+        .nav a:hover{background:#d4af37;color:#1a1a1a;border-radius:4px}
+        .hero{position:relative;text-align:center;padding:70px 20px;background:#1a1a1a url('https://via.placeholder.com/1920x1080?text=Hero+Background') center/cover no-repeat;color:#fff;border-radius:0 0 25px 25px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+        .hero-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+        .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1}
+        .hero-content{position:relative;z-index:2}
+        .hero h1{font-family:'EB Garamond',serif;font-size:46px;font-weight:700;margin-bottom:15px;text-shadow:0 4px 12px rgba(0,0,0,.6);letter-spacing:2px}
+        .hero p{font-size:18px;font-weight:300;margin-bottom:25px;opacity:.9;letter-spacing:1px}
+        .cta-btn{background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;padding:16px 40px;border:none;border-radius:50px;font-size:17px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:all .4s ease;display:inline-flex;align-items:center;position:relative;overflow:hidden;text-transform:uppercase;letter-spacing:1.5px;font-family:'EB Garamond',serif}
+        .cta-btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+        .cta-btn .ripple{position:absolute;background:rgba(255,255,255,.3);border-radius:50%;transform:scale(0);animation:ripple .6s linear;pointer-events:none}
+        .cta-btn i{margin-right:12px;font-size:22px}
+        .theme-toggle{position:fixed;top:15px;right:15px;background:#d4af37;color:#1a1a1a;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1000;transition:all .3s ease}
+        .theme-toggle:hover{transform:scale(1.1)}
+        .promo{text-align:center;padding:35px;background:#fff;border-radius:20px;margin:25px 0;box-shadow:0 5px 25px rgba(0,0,0,.1);position:relative}
+        .promo h2{font-family:'EB Garamond',serif;font-size:30px;color:#2f2a29;margin-bottom:15px;font-weight:700;letter-spacing:1.5px}
+        .promo p{font-size:17px;color:#555;font-weight:300;letter-spacing:.8px}
+        .countdown{display:flex;justify-content:center;gap:20px;margin-top:25px;position:relative}
+        .countdown div{background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;padding:15px;border-radius:12px;font-size:22px;font-weight:600;min-width:85px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.15);transition:transform .3s ease}
+        .countdown div:hover{transform:scale(1.07)}
+        .countdown div.urgent{animation:glow 1.5s infinite;background:linear-gradient(135deg,#e74c3c,#c0392b)}
+        .countdown span{display:block;font-size:14px;font-weight:400}
+        .countdown-tooltip{position:absolute;top:-40px;left:50%;transform:translateX(-50%);background:#2f2a29;color:#fff;padding:8px 12px;border-radius:6px;font-size:14px;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
+        .countdown:hover .countdown-tooltip{opacity:1;visibility:visible}
+        .countdown-message{font-size:15px;color:#e74c3c;margin-top:15px;display:none}
+        .countdown-message.active{display:block}
+        .countdown-cta{display:none;margin:15px auto;padding:10px 20px;background:#d4af37;color:#1a1a1a;border-radius:8px;text-decoration:none;font-weight:600;transition:all .3s ease}
+        .countdown-cta.active{display:inline-block}
+        .countdown-cta:hover{background:#b8972e;transform:scale(1.05)}
+        .countdown-refresh{display:none;margin:15px auto;padding:10px 20px;background:#e74c3c;color:#fff;border-radius:8px;border:none;font-weight:600;cursor:pointer;transition:all .3s ease}
+        .countdown-refresh.active{display:inline-block}
+        .countdown-refresh:hover{background:#c0392b;transform:scale(1.05)}
+        body.dark .promo{background:#2f2a29;color:#e0e0e0}
+        body.dark .promo h2{color:#e0e0e0}
+        body.dark .countdown div{background:linear-gradient(135deg,#d4af37,#b8972e);color:#e0e0e0}
+        body.dark .countdown div.urgent{background:linear-gradient(135deg,#e74c3c,#c0392b)}
+        body.dark .countdown-tooltip{background:#fff;color:#2f2a29}
+        .services{padding:35px;text-align:center;background:#f9f1e9;border-radius:20px;margin:25px 0;box-shadow:0 5px 25px rgba(0,0,0,.1)}
+        .services h2{font-family:'EB Garamond',serif;font-size:30px;color:#2f2a29;margin-bottom:25px;font-weight:700;letter-spacing:1.5px}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+        .service-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,.05);transition:transform .4s ease,box-shadow .4s ease;position:relative;perspective:800px}
+        .service-card:hover{transform:translateY(-8px) rotateX(8deg);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+        .service-card i{color:#d4af37;font-size:38px;margin-bottom:12px;transition:transform .4s ease}
+        .service-card:hover i{transform:scale(1.15) rotate(10deg)}
+        .service-card h3{font-family:'EB Garamond',serif;font-size:19px;color:#2f2a29;margin-bottom:8px}
+        .service-card p{font-size:15px;color:#555}
+        body.dark .services{background:#2f2a29}
+        body.dark .service-card{background:#3a3a3a;color:#e0e0e0}
+        body.dark .service-card h3{color:#e0e0e0}
+        .testimonials{padding:35px;text-align:center;background:#fff;border-radius:20px;margin:25px 0;box-shadow:0 5px 25px rgba(0,0,0,.1)}
+        .testimonials h2{font-family:'EB Garamond',serif;font-size:30px;color:#2f2a29;margin-bottom:25px;font-weight:700;letter-spacing:1.5px}
+        .testimonial-slider{display:flex;overflow:hidden;position:relative}
+        .testimonial-card{flex:0 0 100%;padding:18px;background:#f9f1e9;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,.05);transition:transform .4s ease}
+        .testimonial-card p{font-size:15px;color:#555;font-style:italic}
+        .testimonial-card h4{font-family:'EB Garamond',serif;font-size:17px;color:#2f2a29;margin-top:8px}
+        .testimonial-card video{width:100%;height:auto;border-radius:8px;margin-top:12px}
+        .slider-nav{display:flex;justify-content:center;gap:12px;margin-top:18px}
+        .slider-nav span{width:10px;height:10px;background:#d4af37;border-radius:50%;cursor:pointer;transition:all .3s ease}
+        .slider-nav span.active{background:#b8972e;transform:scale(1.2)}
+        body.dark .testimonials{background:#2f2a29}
+        body.dark .testimonial-card{background:#3a3a3a;color:#e0e0e0}
+        body.dark .testimonial-card h4{color:#e0e0e0}
+        .gallery{padding:35px;text-align:center;background:#f9f1e9;border-radius:20px;margin:25px 0;box-shadow:0 5px 25px rgba(0,0,0,.1)}
+        .gallery h2{font-family:'EB Garamond',serif;font-size:30px;color:#2f2a29;margin-bottom:25px;font-weight:700;letter-spacing:1.5px}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+        .gallery-img{width:100%;height:190px;object-fit:cover;border-radius:12px;border:3px solid #d4af37;transition:transform .4s ease;loading:lazy}
+        .gallery-img:hover{transform:scale(1.05)}
+        .gallery-item{position:relative}
+        .gallery-caption{position:absolute;bottom:8px;left:8px;right:8px;background:rgba(0,0,0,.6);color:#fff;padding:8px;border-radius:4px;opacity:0;transition:opacity .3s ease;font-size:14px}
+        .gallery-item:hover .gallery-caption{opacity:1}
+        .ar-preview-btn{display:block;margin:18px auto;padding:8px 18px;background:#d4af37;color:#1a1a1a;border-radius:8px;text-decoration:none;font-weight:600;transition:all .3s ease}
+        .ar-preview-btn:hover{background:#b8972e;transform:scale(1.05)}
+        body.dark .gallery{background:#2f2a29}
+        .form-container{background:linear-gradient(135deg,#fff,#f9f1e9);padding:35px;border-radius:20px;margin:25px 0;box-shadow:0 8px 30px rgba(0,0,0,.15);position:sticky;top:15px;z-index:10}
+        .form-container h2{font-family:'EB Garamond',serif;font-size:28px;color:#2f2a29;margin-bottom:25px;font-weight:700;letter-spacing:1.5px}
+        .form-group{position:relative;margin-bottom:18px}
+        .form-container input,.form-container select{width:100%;padding:16px;margin:8px 0;border:2px solid #d4af37;border-radius:10px;font-size:15px;font-family:'Open Sans',sans-serif;background:#fff;transition:all .4s ease;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+        .form-container input:focus,.form-container select:focus{border-color:#b8972e;outline:none;box-shadow:0 0 10px rgba(180,151,46,.5);transform:scale(1.01)}
+        .form-container input.invalid,.form-container select.invalid{border-color:#e74c3c}
+        .error-message{position:absolute;bottom:-18px;left:0;color:#e74c3c;font-size:13px;display:none}
+        .error-message.active{display:block}
+        .form-container .cta-btn{width:100%;margin-top:25px}
+        .progress-bar{background:#e0e0e0;border-radius:4px;height:7px;margin-bottom:18px;overflow:hidden}
+        .progress-bar-fill{background:linear-gradient(135deg,#d4af37,#b8972e);height:100%;width:0;transition:width .3s ease}
+        body.dark .form-container{background:linear-gradient(135deg,#3a3a3a,#2f2a29)}
+        body.dark .form-container h2{color:#e0e0e0}
+        body.dark .form-container input,body.dark .form-container select{background:#4a4a4a;color:#e0e0e0}
+        .popup{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,#1a1a1a,#2f2a29);color:#e0e0e0;padding:30px;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.5);z-index:1000;text-align:center;max-width:90%;width:400px}
+        .popup h3{font-family:'EB Garamond',serif;font-size:24px;color:#d4af37;margin-bottom:20px;font-weight:700;letter-spacing:1.5px}
+        .popup p{font-size:17px;margin-bottom:25px;opacity:.9;letter-spacing:.8px}
+        .popup button{background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;padding:14px 30px;border:none;border-radius:10px;font-size:17px;font-weight:600;cursor:pointer;transition:all .4s ease;box-shadow:0 5px 15px rgba(0,0,0,.25);font-family:'EB Garamond',serif;letter-spacing:1.5px}
+        .popup button:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(0,0,0,.3)}
+        .overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:999;animation:fadeIn .5s ease}
+        .chatbot{position:fixed;bottom:85px;right:20px;background:#d4af37;color:#1a1a1a;width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 20px rgba(0,0,0,.25);z-index:100;cursor:pointer;transition:all .3s ease}
+        .chatbot:hover{transform:scale(1.1)}
+        .chatbot-window{display:none;position:fixed;bottom:150px;right:20px;width:280px;height:380px;background:#fff;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.25);z-index:1000;overflow:hidden}
+        .chatbot-window.active{display:block}
+        .chatbot-header{background:#d4af37;color:#1a1a1a;padding:8px;font-family:'EB Garamond',serif;font-size:17px;text-align:center}
+        .chatbot-body{padding:12px;height:calc(100% - 48px);overflow-y:auto}
+        .chatbot-message{margin-bottom:8px;padding:8px;border-radius:8px}
+        .chatbot-message.bot{background:#f9f1e9;color:#2f2a29}
+        .chatbot-message.user{background:#d4af37;color:#1a1a1a;text-align:right}
+        .chatbot-input{position:absolute;bottom:0;width:100%;padding:8px;background:#fff}
+        .chatbot-input input{width:calc(100% - 45px);padding:7px;border:1px solid #d4af37;border-radius:4px}
+        .chatbot-input button{width:38px;background:#d4af37;color:#1a1a1a;border:none;border-radius:4px;cursor:pointer}
+        body.dark .chatbot-window{background:#3a3a3a}
+        body.dark .chatbot-body{background:#2f2a29}
+        body.dark .chatbot-input{background:#3a3a3a}
+        body.dark .chatbot-message.bot{background:#4a4a4a;color:#e0e0e0}
+        .whatsapp-float{position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 20px rgba(0,0,0,.25);z-index:100;transition:all .4s ease}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+        .call-float{position:fixed;bottom:20px;right:90px;background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 20px rgba(0,0,0,.25);z-index:100;transition:all .4s ease}
+        .call-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+        .scroll-top{position:fixed;bottom:150px;right:20px;background:linear-gradient(135deg,#d4af37,#b8972e);color:#1a1a1a;width:48px;height:48px;border-radius:50%;display:none;align-items:center;justify-content:center;box-shadow:0 5px 20px rgba(0,0,0,.25);z-index:100;transition:all .4s ease}
+        .scroll-top:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+        .scroll-top i{font-size:22px}
+        .custom-cursor{position:fixed;width:18px;height:18px;border:2px solid #d4af37;border-radius:50%;pointer-events:none;transition:all .2s ease;z-index:9999;transform:translate(-50%,-50%)}
+        .custom-cursor.hovered{background:rgba(212,175,55,.3);transform:scale(1.4) translate(-35%,-35%)}
+        .footer a:hover{color:#d4af37;transition:color .3s ease}
+        @media (max-width:600px){
+            .container{padding:12px}
+            .hero{padding:45px 12px}
+            .hero h1{font-size:34px}
+            .hero p{font-size:15px}
+            .cta-btn{padding:14px 30px;font-size:15px}
+            .promo h2,.services h2,.testimonials h2,.gallery h2,.form-container h2{font-size:24px}
+            .countdown div{padding:12px;font-size:18px;min-width:65px}
+            .countdown span{font-size:13px}
+            .countdown-tooltip{font-size:12px;padding:6px 10px;top:-35px}
+            .services .service-card{padding:12px}
+            .form-container{padding:25px;margin:18px 0}
+            .popup{padding:20px;width:90%}
+            .whatsapp-float,.call-float{width:50px;height:50px;bottom:15px}
+            .call-float{right:80px}
+            .scroll-top{width:42px;height:42px;bottom:130px}
+            .chatbot{width:48px;height:48px;bottom:75px}
+            .chatbot-window{width:85%;height:280px;bottom:130px}
+            .nav ul{flex-direction:column;text-align:center}
+            .nav a{padding:7px;font-size:14px}
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <nav class="nav" role="navigation">
+        <ul>
+            <li><a href="#hero" aria-label="Trang chủ">Trang Chủ</a></li>
+            <li><a href="#services" aria-label="Dịch vụ">Dịch Vụ</a></li>
+            <li><a href="#testimonials" aria-label="Đánh giá">Đánh Giá</a></li>
+            <li><a href="#gallery" aria-label="Hình ảnh">Hình Ảnh</a></li>
+            <li><a href="#bookingForm" aria-label="Đặt lịch">Đặt Lịch</a></li>
+        </ul>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Chuyển đổi giao diện sáng tối">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="hero fade-in" id="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1><i class="fas fa-crown float"></i> Prime - Đỉnh Cao Xa Hoa</h1>
+            <p>Chăm sóc sofa, thảm, rèm, giày & dọn dẹp nhà<br>Chỉ từ <strong>500K</strong> – <span class="pulse">Giảm 30% hôm nay</span></p>
+            <button class="cta-btn sparkle" onclick="scrollToForm()" aria-label="Đặt dịch vụ độc quyền"><i class="fas fa-gem"></i> Đặt Dịch Vụ Độc Quyền</button>
+        </div>
+    </div>
+    <div class="promo fade-in">
+        <div class="container">
+            <h2><i class="fas fa-star pulse"></i> Ưu Đãi Thượng Lưu</h2>
+            <p>Trải nghiệm dịch vụ xa hoa với <strong>giảm giá 30%</strong><br>Cơ hội chỉ trong hôm nay:</p>
+            <div class="countdown" id="countdown" aria-live="polite">
+                <div><span id="hours" class="flip">00</span>Giờ</div>
+                <div><span id="minutes" class="flip">00</span>Phút</div>
+                <div><span id="seconds" class="flip">00</span>Giây</div>
+                <div class="countdown-tooltip">Ưu đãi 30% áp dụng cho tất cả dịch vụ!</div>
+            </div>
+            <p class="countdown-message" id="countdownMessage">Chỉ còn ít phút! Đặt ngay để không bỏ lỡ!</p>
+            <a href="#bookingForm" class="countdown-cta" id="countdownCTA" onclick="scrollToForm()">Đặt Lịch Ngay</a>
+            <button class="countdown-refresh" id="countdownRefresh" onclick="refreshCountdown()">Gia Hạn Ưu Đãi</button>
+        </div>
+    </div>
+    <div class="services fade-in" id="services">
+        <div class="container">
+            <h2><i class="fas fa-concierge-bell float"></i> Dịch Vụ Đẳng Cấp</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-couch"></i>
+                    <h3>Giặt Sofa</h3>
+                    <p>Tinh hoa vĩnh cửu, sạch sâu, bảo vệ chất liệu.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-rug"></i>
+                    <h3>Giặt Thảm</h3>
+                    <p>Xa hoa từng chi tiết, phục hồi vẻ đẹp nguyên bản.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-window-maximize"></i>
+                    <h3>Giặt Rèm</h3>
+                    <p>Sang trọng trường tồn, rực rỡ mọi không gian.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shoe-prints"></i>
+                    <h3>Giặt Giày</h3>
+                    <p>Tuyệt mỹ kiệt tác, chăm sóc từng đường may.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Bảo Dưỡng</h3>
+                    <p>Công nghệ bespoke, kéo dài tuổi thọ nội thất.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Dọn Dẹp Nhà</h3>
+                    <p>Sạch sẽ hoàn hảo, không gian sống thượng lưu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials fade-in" id="testimonials">
+        <div class="container">
+            <h2><i class="fas fa-quote-left float"></i> Khách Hàng Nói Gì</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p>"Sofa của tôi như mới! Dịch vụ của Prime thật sự đẳng cấp."</p>
+                    <h4>Nguyễn Minh A.</h4>
+                    <video playsinline muted loop loading="lazy" poster="https://via.placeholder.com/300x200?text=Video+Testimonial+1">
+                        <source src="https://sample-videos.com/video321/mp4/240/big_buck_bunny_240p_1mb.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Giặt rèm chuyên nghiệp, sang trọng. Tôi rất hài lòng!"</p>
+                    <h4>Trần Thị B.</h4>
+                    <video playsinline muted loop loading="lazy" poster="https://via.placeholder.com/300x200?text=Video+Testimonial+2">
+                        <source src="https://sample-videos.com/video321/mp4/240/big_buck_bunny_240p_1mb.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Giày cao cấp được chăm sóc hoàn hảo. Đội ngũ tận tâm!"</p>
+                    <h4>Lê Văn C.</h4>
+                    <video playsinline muted loop loading="lazy" poster="https://via.placeholder.com/300x200?text=Video+Testimonial+3">
+                        <source src="https://sample-videos.com/video321/mp4/240/big_buck_bunny_240p_1mb.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="gallery fade-in" id="gallery">
+        <div class="container">
+            <h2><i class="fas fa-camera float"></i> Kết Quả Đẳng Cấp</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="https://via.placeholder.com/600x400?text=Before+After+Sofa" data-lightbox="gallery" data-title="Before & After Sofa">
+                        <picture>
+                            <source srcset="https://via.placeholder.com/300x200.webp?text=Before+After+Sofa" type="image/webp">
+                            <img src="https://via.placeholder.com/300x200?text=Before+After+Sofa" alt="Before After Sofa" class="gallery-img">
+                        </picture>
+                        <div class="gallery-caption">Sofa Trước & Sau</div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://via.placeholder.com/600x400?text=Before+After+Tham" data-lightbox="gallery" data-title="Before & After Thảm">
+                        <picture>
+                            <source srcset="https://via.placeholder.com/300x200.webp?text=Before+After+Tham" type="image/webp">
+                            <img src="https://via.placeholder.com/300x200?text=Before+After+Tham" alt="Before After Thảm" class="gallery-img">
+                        </picture>
+                        <div class="gallery-caption">Thảm Trước & Sau</div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://via.placeholder.com/600x400?text=Before+After+Rem" data-lightbox="gallery" data-title="Before & After Rèm">
+                        <picture>
+                            <source srcset="https://via.placeholder.com/300x200.webp?text=Before+After+Rem" type="image/webp">
+                            <img src="https://via.placeholder.com/300x200?text=Before+After+Rem" alt="Before After Rèm" class="gallery-img">
+                        </picture>
+                        <div class="gallery-caption">Rèm Trước & Sau</div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://via.placeholder.com/600x400?text=Before+After+Giay" data-lightbox="gallery" data-title="Before & After Giày">
+                        <picture>
+                            <source srcset="https://via.placeholder.com/300x200.webp?text=Before+After+Giay" type="image/webp">
+                            <img src="https://via.placeholder.com/300x200?text=Before+After+Giay" alt="Before After Giày" class="gallery-img">
+                        </picture>
+                        <div class="gallery-caption">Giày Trước & Sau</div>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="ar-preview-btn" onclick="startARPreview()" aria-label="Xem trước kết quả bằng AR">Xem Trước Kết Quả Bằng AR</a>
+        </div>
+    </div>
+    <div class="form-container fade-in" id="bookingForm">
+        <div class="container">
+            <h2><i class="fas fa-gem float"></i> Đặt Lịch Đẳng Cấp</h2>
+            <div class="progress-bar"><div class="progress-bar-fill"></div></div>
+            <form id="adForm" onsubmit="submitForm(event)" novalidate>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Họ và tên" required aria-label="Họ và tên">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Số điện thoại (10 số)" pattern="[0-9]{10}" required aria-label="Số điện thoại">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <select name="service" required aria-label="Chọn dịch vụ">
+                        <option value="" disabled selected>Chọn dịch vụ xa hoa</option>
+                        <option value="giat-sofa">Giặt sofa</option>
+                        <option value="giat-tham-dem">Giặt thảm & đệm</option>
+                        <option value="giat-rem">Giặt rèm</option>
+                        <option value="giat-giay">Giặt giày cao cấp</option>
+                        <option value="bao-duong">Bảo dưỡng nội thất</option>
+                        <option value="don-dep-nha">Dọn dẹp nhà</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <button class="cta-btn pulse sparkle" type="submit" aria-label="Đặt lịch ngay"><i class="fas fa-crown"></i> Đặt Lịch Ngay</button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup slide-in" id="popup">
+        <h3><i class="fas fa-bell pulse"></i> Ưu Đãi Giới Hạn</h3>
+        <p>Nhận ngay <strong>giảm 30%</strong> cho dịch vụ xa hoa<br>Chỉ hôm nay!</p>
+        <button class="sparkle" onclick="scrollToForm();closePopup();" aria-label="Đặt ngay"><i class="fas fa-star"></i> Đặt Ngay</button>
+    </div>
+    <div class="chatbot" onclick="toggleChatbot()" aria-label="Mở chatbot">
+        <i class="fas fa-comment-dots" style="font-size:28px"></i>
+    </div>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">Prime Assistant</div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message bot">Xin chào! Tôi có thể giúp bạn đặt lịch hoặc giải đáp thắc mắc.</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Nhập tin nhắn..." aria-label="Nhập tin nhắn chatbot">
+            <button onclick="sendChatbotMessage()" aria-label="Gửi tin nhắn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <a href="https://wa.me/84987654321" target="_blank" class="whatsapp-float float" aria-label="Liên hệ qua WhatsApp">
+        <i class="fab fa-whatsapp" style="font-size:28px"></i>
+    </a>
+    <a href="tel:+84987654321" class="call-float float" aria-label="Gọi ngay">
+        <i class="fas fa-phone-alt" style="font-size:28px"></i>
+    </a>
+    <button class="scroll-top" onclick="scrollToTop()" aria-label="Cuộn lên đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="footer">
+        <div class="container">
+            <p>Liên hệ: <a href="tel:+84987654321" aria-label="Gọi điện">0987 654 321</a> | <a href="mailto:contact@primecare.com" aria-label="Gửi email">contact@primecare.com</a></p>
+            <p>© 2025 Prime - Chăm Sóc Nội Thất Xa Hoa. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com/primecare" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/primecare" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/primecare" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="language-switcher">
+                <select onchange="switchLanguage(this.value)" aria-label="Chọn ngôn ngữ">
+                    <option value="vi" selected>Tiếng Việt</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <audio id="countdownTick" preload="none">
+        <source src="https://cdn.pixabay.com/audio/2023/03/24/audio_7c66e8b3b1.mp3" type="audio/mp3">
+    </audio>
+    <audio id="countdownBeep" preload="none">
+        <source src="https://cdn.pixabay.com/audio/2022/08/10/audio_1b1e4b6e6b.mp3" type="audio/mp3">
+    </audio>
+    <audio id="successSound" preload="none">
+        <source src="https://cdn.pixabay.com/audio/2022/03/24/audio_3b1e4b6e6b.mp3" type="audio/mp3">
+    </audio>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Prime - Chăm Sóc Nội Thất Xa Hoa",
+        "description": "Dịch vụ chăm sóc nội thất xa hoa: giặt sofa, thảm, rèm, giày cao cấp, dọn dẹp nhà.",
+        "telephone": "+84987654321",
+        "email": "contact@primecare.com",
+        "url": "https://primecare.com",
+        "image": "https://via.placeholder.com/1200x628?text=Prime+Noi+That+Xa+Hoa",
+        "address": {"@type": "PostalAddress", "addressCountry": "VN"},
+        "sameAs": ["https://facebook.com/primecare", "https://instagram.com/primecare", "https://twitter.com/primecare"]
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" integrity="sha512-9S6vJ+iYgXs8W7Jq7S9zI48Lq0vG3cU6Yie0ElzB6e4W7X/3K6mPN3jQ2NXLnO3zFqpYOw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-6gudNVbNM/cVsLUMOb6YJ9v47T0dtfKz7arcYP3yx94thHXx2SQ3Vvv88O/c58vfzTh+fb2qWPGjTXWM9+R3ZAg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script>
+        const canvas=document.getElementById("hero-canvas"),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,1000),renderer=new THREE.WebGLRenderer({canvas,alpha:!0});renderer.setSize(window.innerWidth,window.innerHeight),camera.position.z=5;const particlesGeometry=new THREE.BufferGeometry(),particlesCount=300,posArray=new Float32Array(particlesCount*3);for(let i=0;i<particlesCount*3;i++)posArray[i]=(Math.random()-.5)*10;particlesGeometry.setAttribute("position",new THREE.BufferAttribute(posArray,3));const particlesMaterial=new THREE.PointsMaterial({size:.015,color:0xd4af37,transparent:!0,opacity:.7}),particlesMesh=new THREE.Points(particlesGeometry,particlesMaterial);function animate(){requestAnimationFrame(animate),particlesMesh.rotation.y+=.0015,renderer.render(scene,camera)}scene.add(particlesMesh),animate(),window.addEventListener("resize",()=>{renderer.setSize(window.innerWidth,window.innerHeight),camera.aspect=window.innerWidth/window.innerHeight,camera.updateProjectionMatrix()});function toggleTheme(){document.body.classList.toggle("dark");const e=document.querySelector(".theme-toggle i");e.classList.toggle("fa-moon"),e.classList.toggle("fa-sun")}const cursor=document.querySelector(".custom-cursor");document.addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px",cursor.style.top=e.clientY+"px"}),document.querySelectorAll("a, button, .service-card").forEach(e=>{e.addEventListener("mouseenter",()=>cursor.classList.add("hovered")),e.addEventListener("mouseleave",()=>cursor.classList.remove("hovered"))}),document.querySelectorAll(".cta-btn").forEach(e=>{e.addEventListener("click",t=>{const n=document.createElement("span");n.className="ripple",n.style.left=t.clientX-e.getBoundingClientRect().left+"px",n.style.top=t.clientY-e.getBoundingClientRect().top+"px",e.appendChild(n),setTimeout(()=>{n.remove()},600)})});function scrollToForm(){document.getElementById("bookingForm").scrollIntoView({behavior:"smooth"})}function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"})}function closePopup(){document.getElementById("popup").style.display="none",document.getElementById("overlay").style.display="none"}window.addEventListener("scroll",()=>{const e=document.querySelector(".scroll-top");window.scrollY>300?e.style.display="flex":e.style.display="none"});let isSoundEnabled=!0;function toggleCountdownSound(){isSoundEnabled=!isSoundEnabled,alert(isSoundEnabled?"Âm thanh countdown đã bật!":"Âm thanh countdown đã tắt!")}function startCountdown(){let e=new Date;e.setHours(23,59,59,999);const t=document.getElementById("countdown"),n=document.getElementById("countdownMessage"),r=document.getElementById("countdownCTA"),o=document.getElementById("countdownRefresh"),i=document.getElementById("countdownTick"),s=document.getElementById("countdownBeep"),a=setInterval(()=>{const d=new Date().getTime(),c=e-d;if(c<0){clearInterval(a),t.innerHTML="<p class='pulse'>Ưu đãi đã kết thúc!</p>",o.classList.add("active");return}const l=Math.floor(c%(1e3*60*60*24)/(1e3*60*60)),u=Math.floor(c%(1e3*60*60)/(1e3*60)),h=Math.floor(c%(1e3*60)/1e3),m=[document.getElementById("hours"),document.getElementById("minutes"),document.getElementById("seconds")];m.forEach((e,t)=>{const n=[l,u,h][t];e.textContent=n.toString().padStart(2,"0"),e.classList.add("flip"),setTimeout(()=e.classList.remove("flip"),400)}),c<5*60*1e3?(t.querySelectorAll("div").forEach(e=>e.classList.add("urgent")),n.classList.add("active"),r.classList.add("active")):(t.querySelectorAll("div").forEach(e=>e.classList.remove("urgent")),n.classList.remove("active"),r.classList.remove("active")),isSoundEnabled&&(h!==parseInt(m[2].textContent)&&(c<60*1e3?(s.currentTime=0,s.play().catch(e=>console.log("Beep play failed:",e))):(i.currentTime=0,i.play().catch(e=>console.log("Tick play failed:",e)))))},1e3)}function refreshCountdown(){const e=new Date;e.setHours(23,59,59,999),document.getElementById("countdown").innerHTML='<div><span id="hours" class="flip">00</span>Giờ</div><div><span id="minutes" class="flip">00</span>Phút</div><div><span id="seconds" class="flip">00</span>Giây</div><div class="countdown-tooltip">Ưu đãi 30% áp dụng cho tất cả dịch vụ!</div>',document.getElementById("countdownRefresh").classList.remove("active"),startCountdown(),alert("Ưu đãi đã được gia hạn đến hết hôm nay!")}startCountdown(),document.querySelector(".countdown").addEventListener("dblclick",toggleCountdownSound);const form=document.getElementById("adForm"),progressBarFill=document.querySelector(".progress-bar-fill"),successSound=document.getElementById("successSound");function updateProgress(){const e=form.querySelectorAll("input, select"),t=Array.from(e).filter(e=>e.value).length;progressBarFill.style.width=t/e.length*100+"%"}form.querySelectorAll("input, select").forEach(e=>{e.addEventListener("input",()=>{const t=e.nextElementSibling;e.validity.valid?(t.textContent="",e.classList.remove("invalid"),updateProgress()):showError(e,t)})}),form.addEventListener("input",updateProgress);function showError(e,t){e.validity.valueMissing?t.textContent="Vui lòng điền trường này.":"phone"===e.name&&/^[0-9]{10}$/.test(e.value)||(t.textContent="Số điện thoại phải có 10 chữ số."),t.classList.add("active"),e.classList.add("invalid")}function submitForm(e){e.preventDefault();const t=e.target,n=t.querySelector("button");let r=!0;t.querySelectorAll("input, select").forEach(e=>{const n=e.nextElementSibling;e.validity.valid||(showError(e,n),r=!1)}),r&&(n.innerHTML='<i class="fas fa-spinner fa-spin"></i> Đang xử lý...',n.disabled=!0,gtag("event","lead",{event_category:"Form",event_label:"Booking"}),setTimeout(()=>{isSoundEnabled&&successSound.play().catch(e=>console.log("Success sound failed:",e)),n.innerHTML='<i class="fas fa-crown"></i> Đặt Lịch Ngay',n.disabled=!1,t.reset(),fbq("track","Lead"),progressBarFill.style.width="0%",window.location.href="thank-you.html"},500))}const chatbotWindow=document.getElementById("chatbotWindow"),chatbotBody=document.getElementById("chatbotBody"),chatbotInput=document.getElementById("chatbotInput");function toggleChatbot(){chatbotWindow.classList.toggle("active"),chatbotWindow.classList.contains("active")&&chatbotInput.focus()}function sendChatbotMessage(){const e=chatbotInput.value.trim();if(!e)return;const t=document.createElement("div");t.className="chatbot-message user",t.textContent=e,chatbotBody.appendChild(t),setTimeout(()=>{const t=document.createElement("div");t.className="chatbot-message bot",t.textContent=getBotResponse(e.toLowerCase()),chatbotBody.appendChild(t),chatbotBody.scrollTop=chatbotBody.scrollHeight},400),chatbotInput.value="",chatbotBody.scrollTop=chatbotBody.scrollHeight}function getBotResponse(e){return e.includes("đặt lịch")?"Vui lòng điền form đặt lịch phía trên để chúng tôi liên hệ ngay!":e.includes("giá")?"Giá dịch vụ từ 500K, hiện đang giảm 30%! Liên hệ để được báo giá chi tiết.":e.includes("dịch vụ")?"Chúng tôi cung cấp các dịch vụ: giặt sofa, thảm, rèm, giày cao cấp, bảo dưỡng nội thất và dọn dẹp nhà.":"Tôi có thể giúp gì cho bạn? Bạn muốn đặt lịch, hỏi về giá, hay tìm hiểu về dịch vụ?"}chatbotInput.addEventListener("keypress",e=>{"Enter"===e.key&&sendChatbotMessage()});const recognition=new(window.SpeechRecognition||window.webkitSpeechRecognition);recognition.lang="vi-VN",recognition.onresult=e=>{const t=e.results[0][0].transcript.toLowerCase();t.includes("đặt lịch")?scrollToForm():t.includes("lên đầu")?scrollToTop():t.includes("dịch vụ")&&document.querySelector(".services").scrollIntoView({behavior:"smooth"})},document.querySelector(".chatbot").addEventListener("dblclick",()=>{recognition.start()});const translations={vi:{hero_title:"Prime - Đỉnh Cao Xa Hoa",hero_desc:"Chăm sóc sofa, thảm, rèm, giày & dọn dẹp nhà<br>Chỉ từ <strong>500K</strong> – <span class='pulse'>Giảm 30% hôm nay</span>",cta_book:"Đặt Dịch Vụ Độc Quyền",promo_title:"Ưu Đãi Thượng Lưu",promo_desc:"Trải nghiệm dịch vụ xa hoa với <strong>giảm giá 30%</strong><br>Cơ hội chỉ trong hôm nay:",services_title:"Dịch Vụ Đẳng Cấp",testimonials_title:"Khách Hàng Nói Gì",gallery_title:"Kết Quả Đẳng Cấp",form_title:"Đặt Lịch Đẳng Cấp",form_name:"Họ và tên",form_phone:"Số điện thoại (10 số)",form_service:"Chọn dịch vụ xa hoa",popup_title:"Ưu Đãi Giới Hạn",popup_desc:"Nhận ngay <strong>giảm 30%</strong> cho dịch vụ xa hoa<br>Chỉ hôm nay!",popup_cta:"Đặt Ngay"},en:{hero_title:"Prime - Pinnacle of Luxury",hero_desc:"Care for premium sofas, carpets, curtains, shoes & home cleaning<br>From only <strong>500K</strong> – <span class='pulse'>30% off today</span>",cta_book:"Book Exclusive Service",promo_title:"Elite Offer",promo_desc:"Experience luxury services with <strong>30% off</strong><br>Limited offer today only:",services_title:"Premium Services",testimonials_title:"What Our Clients Say",gallery_title:"Exceptional Results",form_title:"Book a Premium Experience",form_name:"Full Name",form_phone:"Phone Number (10 digits)",form_service:"Select luxury service",popup_title:"Limited Offer",popup_desc:"Get <strong>30% off</strong> on luxury services<br>Today only!",popup_cta:"Book Now"}};function switchLanguage(e){document.querySelector(".hero h1").innerHTML=`<i class="fas fa-crown float"></i> ${translations[e].hero_title}`,document.querySelector(".hero p").innerHTML=translations[e].hero_desc,document.querySelector(".hero .cta-btn").innerHTML=`<i class="fas fa-gem"></i> ${translations[e].cta_book}`,document.querySelector(".promo h2").innerHTML=`<i class="fas fa-star pulse"></i> ${translations[e].promo_title}`,document.querySelector(".promo p").innerHTML=translations[e].promo_desc,document.querySelector(".services h2").innerHTML=`<i class="fas fa-concierge-bell float"></i> ${translations[e].services_title}`,document.querySelector(".testimonials h2").innerHTML=`<i class="fas fa-quote-left float"></i> ${translations[e].testimonials_title}`,document.querySelector(".gallery h2").innerHTML=`<i class="fas fa-camera float"></i> ${translations[e].gallery_title}`,document.querySelector(".form-container h2").innerHTML=`<i class="fas fa-gem float"></i> ${translations[e].form_title}`,document.querySelector(".form-container input[name='name']").placeholder=translations[e].form_name,document.querySelector(".form-container input[name='phone']").placeholder=translations[e].form_phone,document.querySelector(".form-container select option[disabled]").textContent=translations[e].form_service,document.querySelector(".popup h3").innerHTML=`<i class="fas fa-bell pulse"></i> ${translations[e].popup_title}`,document.querySelector(".popup p").innerHTML=translations[e].popup_desc,document.querySelector(".popup button").innerHTML=`<i class="fas fa-star"></i> ${translations[e].popup_cta}`}function startARPreview(){alert("Tính năng AR đang được phát triển. Vui lòng dùng thiết bị hỗ trợ WebAR để xem trước kết quả!")}window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","YOUR_GA_TRACKING_ID");const sections=document.querySelectorAll(".fade-in"),observer=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("visible"),t.unobserve(e.target))}),{threshold:.1});sections.forEach(e=>{e.classList.add("fade-in"),observer.observe(e)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth"})})}),function(){const e=document.querySelectorAll(".testimonial-card video");new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting?t.target.play():t.target.pause()})},{threshold:.5}).observe(e)}();const slider=document.querySelector(".testimonial-slider"),slides=slider.children,navDots=document.querySelectorAll(".slider-nav span");let currentSlide=0;function updateSlider(){slides[currentSlide].style.transform=`translateX(-${currentSlide*100}%)`,navDots.forEach((e,t)=>{e.classList.toggle("active",t===currentSlide)})}setInterval(()=>{currentSlide=(currentSlide+1)%slides.length,updateSlider()},5e3),navDots.forEach((e,t)=>{e.addEventListener("click",()=>{currentSlide=t,updateSlider()})}),updateSlider(),"serviceWorker"in navigator&&navigator.serviceWorker.register("/service-worker.js").catch(e=>console.error("Service Worker registration failed:",e));
+    </script>
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","YOUR_PIXEL_ID"),fbq("track","PageView");</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+</body>
+</html>
